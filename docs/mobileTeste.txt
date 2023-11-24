@@ -1,0 +1,69 @@
+Testes Mobile
+
+Existem vários tipos de dispositivos:
+- Celular / Smartphone
+- Tablet
+- Smartwatch / SmartBand
+- SmartTV
+- Dispositivo Vestivel
+- Software embarcado ( eletrodoméstico, automóvel , etc)
+
+2 Sistemas Opracionais ( SOs) que prevalecem: Android e IOS
+O Appium serve para testar os 2 SOs
+
+Hardware
+- compatível com Intel i5, 16 GB ou Mais 
+- i7 ou i9, 32 ou 64 BG, 2 TB de SSD, Placa de Vídeo de 4 ou 8 GB
+
+
+ALternativa
+- device Farm ( Fazenda de dispositivos): Sauce Labs, Perfecto, AWS. etc
+
+A questão do Iphone
+- se você tiver um PC ou notebook com o Mac OS x
+----> Executa testes em iphones, iPads e também em Android
+- Se você tem um computador com Windows ou Linux 
+----> Só executa testes para Android
+
+Tipos de Aplicação
+- WebDav / Site que formatado como App
+- Nativo: é construido para um SO ( 2 projetos: Android e iOS)
+- Hibrido: é criado um scrip basico que compila nos 2 SOs
+
+Exemplo de ROteiro de automação Web
+Pré - Requisitos: Chrome, VS Code, Selenium, Nunit e ChromeDriver
+Como é a criação do Script: 
+Abre o Site
+Inspecionar, descobrir o seletor e usa-lo para automatizar
+
+Roteiro de Automação Mobile
+
+Se fossemos testar usando no nosso PC , precisariamos de:
+- Emulador
+- Dispositivo ligado via cabo USB
+- SDK para cada versão do Android ou IOS que a gente fosse testar
+- Pensado em emulador, você vai precisar de uma magem / VM
+    de cada modelo que for testar
+- Appium Desktop / Server 
+
+Caso contrario , usaremos os testes pela Alternativa ( Sauce Labs)
+
+1 - Criar uma conta no Sauce Labs 
+2 - Upload do App alvo dos testes ( https://github.com/saucelabs/my-demo-app-android/releases/tag/2.0.0)
+fazer dowload do apk 
+-ir na aba App Managemment e fazer o upload 
+3 - Upload de um APK Info ( https://apkpure.com/br/apk-info/com.wt.apkinfo/download/2.4.3)
+- ir na aba App Managemment e fazer o upload 
+4 - Descobrir o AppPackage E O appActivity do app
+AppPackage = com.saucelabs.mydemoapp.android
+AppActivity = com.saucelabs.mydemoapp.android.view.activities.SplashActivity
+5 - Instalar e utilizar o Appium spec
+6 - Exportar o código gerado ou pelo menos os seletores
+7 - Importar ou usar os seletores descobertos
+
+
+Problemas de compatibilidade 
+- o Appium é um derivado do Selenium Webdriver / Selenium Hub
+- Possui vínculo com o Selenium e algumas vezes geram conflitos
+
+
